@@ -103,7 +103,7 @@ You can add your own filters by passing a custom filter array to the Sanitize co
 
 To install, just run:
 
-    composer require Imgusev/sanitizer ~1.0
+    composer require imgusev/sanitizer ~1.0
 
 And you're done! If you're using Laravel, in order to be able to access some extra functionality you must register both the Service provider in the providers array in config/app.php, as well as the Sanitizer Facade:
 
