@@ -1,8 +1,8 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace Imgusev\Sanitizer\Filters;
 
-use Waavi\Sanitizer\Contracts\Filter;
+use Imgusev\Sanitizer\Contracts\Filter;
 
 class Capitalize implements Filter
 {
@@ -14,6 +14,6 @@ class Capitalize implements Filter
      */
     public function apply($value, $options = [])
     {
-        return is_string($value) ? ucwords(strtolower($value)) : $value;
+        return is_string($value) ? mb_convert_case(mb_strtolower($value), MB_CASE_TITLE) : $value;
     }
 }

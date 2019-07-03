@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer\Laravel;
+namespace Imgusev\Sanitizer\Laravel;
 
 trait SanitizesInput
 {

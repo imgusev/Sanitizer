@@ -1,8 +1,8 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace Imgusev\Sanitizer\Filters;
 
-use Waavi\Sanitizer\Contracts\Filter;
+use Imgusev\Sanitizer\Contracts\Filter;
 
 class EscapeHTML implements Filter
 {

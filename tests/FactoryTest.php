@@ -1,20 +1,20 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Waavi\Sanitizer\Laravel\Factory;
-use Waavi\Sanitizer\Sanitizer;
+use Imgusev\Sanitizer\Laravel\Factory;
+use Imgusev\Sanitizer\Sanitizer;
 
 class FactoryTest extends TestCase
 {
     public function sanitize($data, $rules)
     {
         $sanitizer = new Sanitizer($data, $rules, [
-            'capitalize'  => \Waavi\Sanitizer\Filters\Capitalize::class,
-            'escape'      => \Waavi\Sanitizer\Filters\EscapeHTML::class,
-            'format_date' => \Waavi\Sanitizer\Filters\FormatDate::class,
-            'lowercase'   => \Waavi\Sanitizer\Filters\Lowercase::class,
-            'uppercase'   => \Waavi\Sanitizer\Filters\Uppercase::class,
-            'trim'        => \Waavi\Sanitizer\Filters\Trim::class,
+            'capitalize'  => \Imgusev\Sanitizer\Filters\Capitalize::class,
+            'escape'      => \Imgusev\Sanitizer\Filters\EscapeHTML::class,
+            'format_date' => \Imgusev\Sanitizer\Filters\FormatDate::class,
+            'lowercase'   => \Imgusev\Sanitizer\Filters\Lowercase::class,
+            'uppercase'   => \Imgusev\Sanitizer\Filters\Uppercase::class,
+            'trim'        => \Imgusev\Sanitizer\Filters\Trim::class,
         ]);
         return $sanitizer->sanitize();
     }

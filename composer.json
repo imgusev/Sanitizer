@@ -1,12 +1,12 @@
 {
-    "name": "waavi/sanitizer",
+    "name": "Imgusev/sanitizer",
     "description": "Data sanitizer and Laravel 5 form requests with input sanitation.",
     "keywords": ["laravel", "sanitation", "input sanitation", "input sanitizer", "input", "transform input", "input filter"],
     "license": "MIT",
     "authors": [
         {
             "name": "William Wallace San Paulo",
-            "email": "info@waavi.com"
+            "email": "info@Imgusev.com"
         }
     ],
     "require": {
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Waavi\\Sanitizer\\": "src/"
+            "Imgusev\\Sanitizer\\": "src/"
         }
     },
     "autoload-dev": {
@@ -28,10 +28,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Waavi\\Sanitizer\\Laravel\\SanitizerServiceProvider"
+                "Imgusev\\Sanitizer\\Laravel\\SanitizerServiceProvider"
             ],
             "aliases": {
-                "Sanitizer": "Waavi\\Sanitizer\\Laravel\\Facade"
+                "Sanitizer": "Imgusev\\Sanitizer\\Laravel\\Facade"
             }
         }
     },

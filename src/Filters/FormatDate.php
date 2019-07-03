@@ -1,10 +1,10 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace Imgusev\Sanitizer\Filters;
 
 use Carbon\Carbon;
 use InvalidArgumentException;
-use Waavi\Sanitizer\Contracts\Filter;
+use Imgusev\Sanitizer\Contracts\Filter;
 
 class FormatDate implements Filter
 {

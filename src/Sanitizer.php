@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer;
+namespace Imgusev\Sanitizer;
 
 use Closure;
 use Illuminate\Support\Arr;
@@ -26,15 +26,15 @@ class Sanitizer
      *  @var array
      */
     protected $filters = [
-        'capitalize'  => \Waavi\Sanitizer\Filters\Capitalize::class,
-        'cast'        => \Waavi\Sanitizer\Filters\Cast::class,
-        'escape'      => \Waavi\Sanitizer\Filters\EscapeHTML::class,
-        'format_date' => \Waavi\Sanitizer\Filters\FormatDate::class,
-        'lowercase'   => \Waavi\Sanitizer\Filters\Lowercase::class,
-        'uppercase'   => \Waavi\Sanitizer\Filters\Uppercase::class,
-        'trim'        => \Waavi\Sanitizer\Filters\Trim::class,
-        'strip_tags'  => \Waavi\Sanitizer\Filters\StripTags::class,
-        'digit'       => \Waavi\Sanitizer\Filters\Digit::class,
+        'capitalize'  => \Imgusev\Sanitizer\Filters\Capitalize::class,
+        'cast'        => \Imgusev\Sanitizer\Filters\Cast::class,
+        'escape'      => \Imgusev\Sanitizer\Filters\EscapeHTML::class,
+        'format_date' => \Imgusev\Sanitizer\Filters\FormatDate::class,
+        'lowercase'   => \Imgusev\Sanitizer\Filters\Lowercase::class,
+        'uppercase'   => \Imgusev\Sanitizer\Filters\Uppercase::class,
+        'trim'        => \Imgusev\Sanitizer\Filters\Trim::class,
+        'strip_tags'  => \Imgusev\Sanitizer\Filters\StripTags::class,
+        'digit'       => \Imgusev\Sanitizer\Filters\Digit::class,
     ];
 
     /**

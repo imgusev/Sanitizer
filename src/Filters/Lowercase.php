@@ -1,8 +1,8 @@
 <?php
 
-namespace Waavi\Sanitizer\Filters;
+namespace Imgusev\Sanitizer\Filters;
 
-use Waavi\Sanitizer\Contracts\Filter;
+use Imgusev\Sanitizer\Contracts\Filter;
 
 class Lowercase implements Filter
 {
@@ -14,6 +14,6 @@ class Lowercase implements Filter
      */
     public function apply($value, $options = [])
     {
-        return is_string($value) ? strtolower($value) : $value;
+        return is_string($value) ? mb_strtolower($value) : $value;
     }
 }

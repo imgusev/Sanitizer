@@ -1,17 +1,8 @@
-# WAAVI Sanitizer
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/waavi/sanitizer.svg?style=flat-square)](https://packagist.org/packages/waavi/sanitizer)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/waavi/sanitizer/master.svg?style=flat-square)](https://travis-ci.org/waavi/sanitizer)
-[![Total Downloads](https://img.shields.io/packagist/dt/waavi/sanitizer.svg?style=flat-square)](https://packagist.org/packages/waavi/sanitizer)
-
-## About WAAVI
-
-WAAVI is a Spanish web development and product consulting agency, working with Startups and other online businesses since 2013. Need to get work done in Laravel or PHP? Contact us through [waavi.com](http://waavi.com/en/contactanos).
+# Imgusev Sanitizer
 
 ## Introduction
 
-WAAVI Sanitizer provides an easy way to format user input, both through the provided filters or through custom ones that can easily be added to the sanitizer library.
+Imgusev Sanitizer provides an easy way to format user input, both through the provided filters or through custom ones that can easily be added to the sanitizer library.
 
 Although not limited to Laravel 5 users, there are some extensions provided for this framework, like a way to easily Sanitize user input through a custom FormRequest and easier extensibility.
 
@@ -32,7 +23,7 @@ Given a data array with the following format:
 ```
 We can easily format it using our Sanitizer and the some of Sanitizer's default filters:
 ```php
-    use \Waavi\Sanitizer\Sanitizer;
+    use \Imgusev\Sanitizer\Sanitizer;
 
     $filters = [
         'first_name'    =>  'trim|escape|capitalize',
@@ -83,9 +74,9 @@ The following filters are available out of the box:
 
 ## Adding custom filters
 
-You can add your own filters by passing a custom filter array to the Sanitize constructor as the third parameter. For each filter name, either a closure or a full classpath to a Class implementing the Waavi\Sanitizer\Contracts\Filter interface must be provided. Closures must always accept two parameters: $value and an $options array:
+You can add your own filters by passing a custom filter array to the Sanitize constructor as the third parameter. For each filter name, either a closure or a full classpath to a Class implementing the Imgusev\Sanitizer\Contracts\Filter interface must be provided. Closures must always accept two parameters: $value and an $options array:
 ```php
-    class RemoveStringsFilter implements Waavi\Sanitizer\Contracts\Filter
+    class RemoveStringsFilter implements Imgusev\Sanitizer\Contracts\Filter
     {
         public function apply($value, $options = [])
         {
@@ -112,19 +103,19 @@ You can add your own filters by passing a custom filter array to the Sanitize co
 
 To install, just run:
 
-    composer require waavi/sanitizer ~1.0
+    composer require Imgusev/sanitizer ~1.0
 
 And you're done! If you're using Laravel, in order to be able to access some extra functionality you must register both the Service provider in the providers array in config/app.php, as well as the Sanitizer Facade:
 
 ```php
     'providers' => [
         ...
-        Waavi\Sanitizer\Laravel\SanitizerServiceProvider::class,
+        Imgusev\Sanitizer\Laravel\SanitizerServiceProvider::class,
     ];
 
     'aliases' => [
         ...
-        'Sanitizer' => Waavi\Sanitizer\Laravel\Facade::class,
+        'Sanitizer' => Imgusev\Sanitizer\Laravel\Facade::class,
     ];
 ```
 
@@ -147,7 +138,7 @@ You may also Sanitize input in your own FormRequests by using the SanitizesInput
     namespace App\Http\Requests;
 
     use App\Http\Requests\Request;
-    use Waavi\Sanitizer\Laravel\SanitizesInput;
+    use Imgusev\Sanitizer\Laravel\SanitizesInput;
 
     class SanitizedRequest extends Request
     {
@@ -172,4 +163,4 @@ The only difference with a Laravel FormRequest is that now you'll have an extra 
 
 ### License
 
-WAAVI Sanitizer is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+IMGusev Sanitizer is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

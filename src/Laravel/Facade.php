@@ -1,6 +1,6 @@
 <?php
 
-namespace Waavi\Sanitizer\Laravel;
+namespace Imgusev\Sanitizer\Laravel;
 
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 
